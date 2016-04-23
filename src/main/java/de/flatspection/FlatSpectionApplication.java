@@ -3,6 +3,11 @@ package de.flatspection;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * entry point
+ * @author phoebus
+ *
+ */
 @SpringBootApplication
 public class FlatSpectionApplication {
 
