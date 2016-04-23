@@ -1,3 +1,0 @@
-# KaDoRi
-
-Read Me Again
