@@ -6,11 +6,14 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>KaDoRi</title>
+	<title>FlatSpection</title>
+	<link rel="icon" href='<c:url value="/resources/images/home_icon.png" />'/>
 	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style.css" />" />
 	<!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/bootstrap.min.css" />" />
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/starter-template.css" />" />
+    <!-- icons -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
 	<div id="header">
