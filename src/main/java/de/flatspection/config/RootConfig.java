@@ -10,6 +10,8 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import de.flatspection.dao.UserDao;
 import de.flatspection.dao.impl.UserDaoImpl;
+import de.flatspection.service.UserService;
+import de.flatspection.service.impl.UserServiceImpl;
 
 @Configuration
 @ComponentScan( {"com.hsp.kadori.service" })
@@ -34,6 +36,11 @@ public class RootConfig {
 	@Bean
 	public UserDao userDao() {
 		return new UserDaoImpl();
+	}
+	
+	@Bean
+	public UserService userService() {
+		return new UserServiceImpl();
 	}
 	
 }

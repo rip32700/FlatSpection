@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/starter-template.css" />" />
     <!-- icons -->
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </head>
 <body>
 	<div id="header">
