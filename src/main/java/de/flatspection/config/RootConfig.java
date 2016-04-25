@@ -14,7 +14,7 @@ import de.flatspection.service.UserService;
 import de.flatspection.service.impl.UserServiceImpl;
 
 @Configuration
-@ComponentScan( {"com.hsp.kadori.service" })
+@ComponentScan( {"de.flatspection.service" })
 public class RootConfig {
 
 	
