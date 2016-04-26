@@ -10,32 +10,32 @@
 		<form:form class="form-horizontal" modelAttribute="userDTO" method="POST">
 			<div class="form-group">
 				<label>First Name: </label>
-				<form:input class="form-control" path="firstName" value="" required="true" />
+				<form:input class="form-control" path="firstName" value="" required="true" placeholder="Your First Name..."/>
 				<form:errors path="firstName" element="div" cssClass="error"/>
 			</div>
 			<div class="form-group">
 				<label>Last Name: </label>
-				<form:input class="form-control" path="lastName" value="" required="true" />
+				<form:input class="form-control" path="lastName" value="" required="true" placeholder="Your Last Name..."/>
 				<form:errors path="lastName" element="div" cssClass="error" />
 			</div>
 			<div class="form-group">
 				<label>Username: </label>
-				<form:input class="form-control" path="username" value="" required="true" />
+				<form:input class="form-control" path="username" value="" required="true" placeholder="Your username..."/>
 				<form:errors path="username" element="div" cssClass="error"/>
 			</div>
 			<div class="form-group">
 				<label>Email: </label>
-				<form:input class="form-control" path="email" value="" required="true" />
+				<form:input class="form-control" path="email" value="" required="true" placeholder="Your E-Mail address..."/>
 				<form:errors path="email" element="div" cssClass="error" />
 			</div>
 			<div class="form-group">
 				<label>Password: </label>
-				<form:input class="form-control" path="password" value="" type="password" required="true" />
+				<form:input class="form-control" path="password" value="" type="password" required="true" placeholder="Your password..."/>
 				<form:errors path="password" element="div" cssClass="error" />
 			</div>
 			<div class="form-group">
 				<label>Confirm Password: </label>
-				<form:input class="form-control" path="matchingPassword" value="" type="password" required="true" />
+				<form:input class="form-control" path="matchingPassword" value="" type="password" required="true" placeholder="Please repeat your password..."/>
 				<form:errors path="matchingPassword" element="div" cssClass="error" />
 			</div>
 			<div class="form-group">
@@ -52,6 +52,26 @@
 					</div>
 					<form:errors path="birthday" element="div"  cssClass="error"/>
 				</div>
+			</div>
+			<div class="form-group">
+				<label>Street: </label>
+				<form:input class="form-control" path="street" value="" required="true" placeholder="Your Street Name..."/>
+				<form:errors path="street" element="div" cssClass="error" />
+			</div>
+			<div class="form-group">
+				<label>Street Number: </label>
+				<form:input class="form-control" path="streetNumber" required="true" placeholder="Your Street Number..."/>
+				<form:errors path="streetNumber" element="div" cssClass="error" />
+			</div>
+			<div class="form-group">
+				<label>City: </label>
+				<form:input class="form-control" path="city" value="" required="true" placeholder="Your City Name..."/>
+				<form:errors path="city" element="div" cssClass="error" />
+			</div>
+			<div class="form-group">
+				<label>ZIP: </label>
+				<form:input class="form-control" path="zip" required="true" placeholder="Your ZIP code..."/>
+				<form:errors path="zip" element="div" cssClass="error" />
 			</div>
 			<button class="btn btn-primary" type="submit">Submit</button>
 		</form:form>

@@ -31,10 +31,10 @@ public class UserServiceImpl implements UserService {
         newUser.setUsername(user.getUsername());
         newUser.setPassword(user.getPassword());
         newUser.setEmail(user.getEmail());
-        newUser.setStreet("");
-        newUser.setStreetNumber(1);
-        newUser.setCity("");
-        newUser.setZip(1);
+        newUser.setStreet(user.getStreet());
+        newUser.setStreetNumber(user.getStreetNumber());
+        newUser.setCity(user.getCity());
+        newUser.setZip(user.getZip());
         newUser.setType(user.getType());
         newUser.setBirthday(user.getBirthday());
         newUser.setRole(2); /*ROLE_USER*/

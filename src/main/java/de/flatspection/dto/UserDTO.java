@@ -42,11 +42,25 @@ public class UserDTO {
 	@NotEmpty
 	private String birthday;
 	
+	@NotNull
+	@NotEmpty
+	private String street;
+	
+	private Integer streetNumber;
+	
+	@NotNull
+	@NotEmpty
+	private String city;
+	
+	private Integer zip;
+	
 	public UserDTO() {
 		
 	}
 	
-	public UserDTO(String firstName, String lastName, String username, String email, String password, String matchingPassword, String type, String birthday) {
+	public UserDTO(String firstName, String lastName, String username, String email, String password,
+			String matchingPassword, String type, String birthday, String street, Integer streetNumber, String city,
+			Integer zip) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -56,8 +70,12 @@ public class UserDTO {
 		this.matchingPassword = matchingPassword;
 		this.type = type;
 		this.birthday = birthday;
+		this.street = street;
+		this.streetNumber = streetNumber;
+		this.city = city;
+		this.zip = zip;
 	}
-	
+
 	public String getBirthday() {
 		return birthday;
 	}
@@ -111,12 +129,36 @@ public class UserDTO {
 		this.username = username;
 	}
 
-	@Override
-	public String toString() {
-		return "UserDTO [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", password="
-				+ password + ", matchingPassword=" + matchingPassword + ", type=" + type + "]";
+	public String getStreet() {
+		return street;
 	}
-	
-	
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public Integer getStreetNumber() {
+		return streetNumber;
+	}
+
+	public void setStreetNumber(Integer streetNumber) {
+		this.streetNumber = streetNumber;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public Integer getZip() {
+		return zip;
+	}
+
+	public void setZip(Integer zip) {
+		this.zip = zip;
+	}
 	
 }
