@@ -7,8 +7,7 @@
 <br>
 <div class="row">
 	<div class="col-md-4 col-md-offset-4">
-		<form:form class="form-horizontal" modelAttribute="userDTO"
-			method="POST">
+		<form:form class="form-horizontal" modelAttribute="userDTO" method="POST">
 			<div class="form-group">
 				<label>First Name: </label>
 				<form:input class="form-control" path="firstName" value="" required="true" />
@@ -18,6 +17,11 @@
 				<label>Last Name: </label>
 				<form:input class="form-control" path="lastName" value="" required="true" />
 				<form:errors path="lastName" element="div" cssClass="error" />
+			</div>
+			<div class="form-group">
+				<label>Username: </label>
+				<form:input class="form-control" path="username" value="" required="true" />
+				<form:errors path="username" element="div" cssClass="error"/>
 			</div>
 			<div class="form-group">
 				<label>Email: </label>

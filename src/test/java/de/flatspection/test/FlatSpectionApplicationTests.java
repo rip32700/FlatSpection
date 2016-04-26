@@ -1,4 +1,4 @@
-package com.hsp.kadori;
+package de.flatspection.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = FlatSpectionApplication.class)
 @WebAppConfiguration
-public class KaDoRiApplicationTests {
+public class FlatSpectionApplicationTests {
 
 	@Test
 	public void contextLoads() {

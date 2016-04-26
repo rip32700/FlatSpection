@@ -19,6 +19,10 @@ public class UserDTO {
 	
 	@NotNull
 	@NotEmpty
+	private String username;
+	
+	@NotNull
+	@NotEmpty
 	private String email;
 	
 	@NotNull
@@ -42,10 +46,11 @@ public class UserDTO {
 		
 	}
 	
-	public UserDTO(String firstName, String lastName, String email, String password, String matchingPassword, String type, String birthday) {
+	public UserDTO(String firstName, String lastName, String username, String email, String password, String matchingPassword, String type, String birthday) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.username = username;
 		this.email = email;
 		this.password = password;
 		this.matchingPassword = matchingPassword;
@@ -98,6 +103,12 @@ public class UserDTO {
 	}
 	public void setMatchingPassword(String matchingPassword) {
 		this.matchingPassword = matchingPassword;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	@Override

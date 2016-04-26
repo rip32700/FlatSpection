@@ -1,40 +1,81 @@
 package de.flatspection.domain;
 
-import java.time.LocalDate;
-
 public class User {
 
-	private String firstName;
-	private String lastName;
-	private LocalDate birthday;
+	private Long userId;
+	private String username;
+	private String firstname;
+	private String lastname;
 	private String email;
 	private String password;
-	private String matchingPassword;
-	
+	private String birthday;
 	private String street;
 	private int streetNumber;
 	private String city;
 	private int zip;
-	
 	private String type;
+	private int role;
 	
 	public User() {
 		
 	}
 
-	public User(String firstName, String lastName, String email, String password, String matchingPassword, String street, int streetNumber, String city, int zip, LocalDate birthday, String type) {
+	public User(Long userId, String username, String firstname, String lastname, String email, String password,
+			String birthday, String street, int streetNumber, String city, int zip, String type, int role) {
 		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.userId = userId;
+		this.username = username;
+		this.firstname = firstname;
+		this.lastname = lastname;
 		this.email = email;
 		this.password = password;
-		this.matchingPassword = matchingPassword;
+		this.birthday = birthday;
 		this.street = street;
 		this.streetNumber = streetNumber;
 		this.city = city;
 		this.zip = zip;
-		this.birthday = birthday;
 		this.type = type;
+		this.role = role;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getPassword() {
@@ -45,44 +86,12 @@ public class User {
 		this.password = password;
 	}
 
-	public String getMatchingPassword() {
-		return matchingPassword;
-	}
-
-	public void setMatchingPassword(String matchingPassword) {
-		this.matchingPassword = matchingPassword;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
-	public LocalDate getBirthday() {
+	public String getBirthday() {
 		return birthday;
 	}
 
-	public void setBirthday(LocalDate birthday) {
+	public void setBirthday(String birthday) {
 		this.birthday = birthday;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
 	}
 
 	public String getStreet() {
@@ -125,14 +134,12 @@ public class User {
 		this.type = type;
 	}
 
-	@Override
-	public String toString() {
-		return "UserDTO [firstName=" + firstName + ", lastName=" + lastName + ", street=" + street + ", streetNumber="+ streetNumber + ", city=" + city + ", zip=" + zip + ", birthday=" + birthday + ", type=" + type + "]";
+	public int getRole() {
+		return role;
 	}
 
-	public Object getRole() {
-		// TODO Auto-generated method stub
-		return null;
+	public void setRole(int role) {
+		this.role = role;
 	}
-
+	
 }

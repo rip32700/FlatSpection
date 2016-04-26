@@ -17,27 +17,33 @@ import de.flatspection.dao.UserDao;
 import de.flatspection.domain.User;
 
 @Service
-public class MyUserDetailsServiceImpl implements UserDetailsService {
+public class MyUserDetailsService implements UserDetailsService {
 
-	@Inject
+	@Inject 
 	private UserDao repository;
 	
-	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        User user = repository.findByEmail(email);
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
+		User user = repository.findByUsername(username);
         if (user == null) {
-            throw new UsernameNotFoundException("No user found with username: "+ email);
+            throw new UsernameNotFoundException("No user found with username: "+ username);
         }
         boolean enabled = true;
         boolean accountNonExpired = true;
         boolean credentialsNonExpired = true;
         boolean accountNonLocked = true;
-        return  null; //new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword().toLowerCase(), enabled, accountNonExpired, credentialsNonExpired, accountNonLocked, getAuthorities(user.getRole().getRole()));
-    }
-     
-    private Collection<? extends GrantedAuthority>getAuthorities(Integer role){
+        return  new org.springframework.security.core.userdetails.User
+          (user.getEmail(), 
+          user.getPassword().toLowerCase(), enabled, accountNonExpired, credentialsNonExpired, 
+            accountNonLocked, getAuthorities(user.getRole()));
+	}
+	
+	private Collection<? extends GrantedAuthority> getAuthorities(Integer role){
         List<GrantedAuthority> authList = getGrantedAuthorities(getRoles(role));
         return authList;
     }
+	
     private List<String> getRoles(Integer role) {
         List<String> roles = new ArrayList<String>();
         if (role.intValue() == 1) {
@@ -48,6 +54,7 @@ public class MyUserDetailsServiceImpl implements UserDetailsService {
         }
         return roles;
     }   
+    
     private static List<GrantedAuthority> getGrantedAuthorities (List<String> roles) {
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
         for (String role : roles) {
@@ -55,5 +62,5 @@ public class MyUserDetailsServiceImpl implements UserDetailsService {
         }
         return authorities;
     }
-}
 
+}

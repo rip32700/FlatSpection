@@ -1,6 +1,8 @@
 package de.flatspection.web;
 
 import javax.inject.Inject;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -31,7 +33,7 @@ public class RegistrationController {
 	}
 	
 	@RequestMapping(value="/register", method=RequestMethod.POST)
-	public ModelAndView registerUser(@ModelAttribute("userDTO") @Valid final UserDTO user, final BindingResult result, final Errors errors) {
+	public ModelAndView registerUser(@ModelAttribute("userDTO") @Valid final UserDTO user, final BindingResult result, final Errors errors, final HttpServletRequest request) {
 		
 		User registered = new User();
 		
@@ -45,7 +47,13 @@ public class RegistrationController {
 	        return new ModelAndView("registration", "userDTO", user);
 	    } 
 	    else {
-	        return new ModelAndView("successRegister", "userDTO", user);
+	    	// auto login after successful registraiton
+	    	try {
+				request.login(registered.getUsername(),registered.getPassword());
+			} catch (ServletException e) {
+				e.printStackTrace();
+			}
+	        return new ModelAndView("registrationSuccess", "userDTO", user);
 	    }
 	}
 
