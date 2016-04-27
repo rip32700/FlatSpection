@@ -11,11 +11,12 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#"><i class="fa fa-home" aria-hidden="true"></i> FlatSpection</a>
+			<a class="navbar-brand" href="#"><i class="fa fa-home" aria-hidden="true"></i> FlatSpection </a>
+			<!-- <a href="#" class="pull-left"><img class=".img-responsive" width="40px;" height="40px;" src="<c:url value="/resources/images/logo3.png" />"></a> -->
 		</div>
 		<div id="navbar" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
+				<li class="active"><a href="<c:url value="/home" />">Home</a></li>
 				<li><a href="#about">Search Accomodations</a></li>
 				<li><a href="/test">Test Page</a></li>
 			</ul>

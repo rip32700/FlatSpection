@@ -9,6 +9,8 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.social.config.annotation.SocialConfiguration;
+import org.springframework.social.security.SpringSocialConfigurer;
 
 import de.flatspection.service.impl.MyUserDetailsService;
 
@@ -44,6 +46,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .usernameParameter("ssoId").passwordParameter("password")
         .and().csrf()
         .and().exceptionHandling().accessDeniedPage("/access_Denied");
+        //.and().apply(new SpringSocialConfigurer().postLoginUrl("/").alwaysUsePostLoginUrl(true));
     }
     
     @Bean
