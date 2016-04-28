@@ -9,9 +9,12 @@ public class HomeController {
 
 	@RequestMapping(value={"/", "/home"})
 	public String home(final Model model) {
-		model.addAttribute("msg", "Hello World!");
-		
 		return "home";
+	}
+	
+	@RequestMapping(value={"/search"})
+	public String search(final Model model) {
+		return "search";
 	}
 	
 }

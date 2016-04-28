@@ -13,7 +13,7 @@ import de.flatspection.domain.User;
 
 public class UserDaoImpl implements UserDao {
 
-	private static final String USER_URI_V1 = "http://localhost:8282/user/";
+	private static final String USER_URI_V1 = "http://localhost:8585/user/";
     private RestTemplate restTemplate = new RestTemplate();
 	
 	@Inject

@@ -13,6 +13,10 @@
  		<put-attribute name="body" value="/WEB-INF/views/home.jsp" />
  	</definition>
  	
+ 	<definition name="search" extends="base">
+ 		<put-attribute name="body" value="/WEB-INF/views/search.jsp" />
+ 	</definition>
+ 	
  	<definition name="error" extends="base">
  		<put-attribute name="body" value="/WEB-INF/views/error.jsp" />
  	</definition>

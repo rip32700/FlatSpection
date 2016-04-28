@@ -19,6 +19,23 @@
 	color: red;
 }
 
+
+#bg{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url("../images/munich.png");
+      background-size: cover;
+      background-color: purple;
+	
+    background-color: #cccccc;
+}
+
+.fullscreen {
+    width: 100%;
+    height: 100%;
+}
+
 /* custom navbar ##ff6633*/
 .navbar-custom {
   background-color: #e63900;

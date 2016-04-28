@@ -23,7 +23,7 @@ public class RootConfig {
 	public DataSource dataSource() {
 		DriverManagerDataSource ds = new DriverManagerDataSource();
 		ds.setDriverClassName("com.mysql.jdbc.Driver");
-		ds.setUrl("jdbc:mysql://localhost:3306/KaDoRi?user=root&password=password");
+		ds.setUrl("jdbc:mysql://localhost:3306/FlatSpection?user=root&password=password");
 		return ds;
 	}
 	
