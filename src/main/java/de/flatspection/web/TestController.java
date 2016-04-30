@@ -12,4 +12,10 @@ public class TestController {
 		model.addAttribute("msg", "Hello Test!");
 		return "test";
 	}
+	
+	@RequestMapping(value="/test2")
+	public String test2(final Model model) {
+		model.addAttribute("msg", "Hello Test!");
+		return "test2";
+	}
 }

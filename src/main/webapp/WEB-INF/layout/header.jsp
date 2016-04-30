@@ -17,7 +17,7 @@
 		<div id="navbar" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="<c:url value="/home" />">Home</a></li>
-				<li><a href="#about">Search Accomodations</a></li>
+				<li><a href="#about">Provide Appartement</a></li>
 				<li><a href="/test">Test Page</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">

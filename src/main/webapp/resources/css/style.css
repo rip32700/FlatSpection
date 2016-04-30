@@ -26,9 +26,9 @@
       height: 100%;
       background-image: url("../images/munich.png");
       background-size: cover;
-      background-color: purple;
-	
-    background-color: #cccccc;
+      background-color: #cccccc;
+      top: 0px;
+      left: 0px;
 }
 
 .fullscreen {
@@ -36,10 +36,10 @@
     height: 100%;
 }
 
-/* custom navbar ##ff6633*/
+/* custom navbar #eb9a94*/
 .navbar-custom {
-  background-color: #e63900;
-  border-color: #ff6633;
+  background-color: #c9302c;
+  border-color: #eb9a94;
 }
 .navbar-custom .navbar-brand {
   color: white; /*#000000;*/
@@ -57,26 +57,26 @@
 .navbar-custom .navbar-nav > li > a:hover,
 .navbar-custom .navbar-nav > li > a:focus {
   color: #000000;
-  background-color: #e63900;
+  background-color: #c9302c;
 }
 .navbar-custom .navbar-nav > .active > a,
 .navbar-custom .navbar-nav > .active > a:hover,
 .navbar-custom .navbar-nav > .active > a:focus {
   color: #000000;
-  background-color: #ff6633;
+  background-color: #eb9a94;
 }
 .navbar-custom .navbar-nav > .open > a,
 .navbar-custom .navbar-nav > .open > a:hover,
 .navbar-custom .navbar-nav > .open > a:focus {
   color: #000000;
-  background-color: #ff6633;
+  background-color: #eb9a94;
 }
 .navbar-custom .navbar-toggle {
-  border-color: #ff6633;
+  border-color: #eb9a94;
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: #ff6633;
+  background-color: #eb9a94;
 }
 .navbar-custom .navbar-toggle .icon-bar {
   background-color: #000000;
@@ -104,6 +104,6 @@
   .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #000000;
-    background-color: #ff6633;
+    background-color: #eb9a94;
   }
 }
