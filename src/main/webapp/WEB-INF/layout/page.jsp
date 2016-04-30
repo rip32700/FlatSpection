@@ -7,22 +7,24 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>FlatSpection</title>
+	
 	<link rel="icon" href='<c:url value="/resources/images/logo3.png" />'/>
 	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style.css" />" />
+	
 	<!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/bootstrap.min.css" />" />
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	  
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/starter-template.css" />" />
-    <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/bootstrap-social.css" />" />
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/font-awesome.css" />" />
+    
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    
     <!-- icons -->
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Three -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r69/three.min.js"></script>
-    <!-- img slider -->
-    <link rel="stylesheet" href="<c:url value="/resources/css/unslider.css"/>"/>
-    <link rel="stylesheet" href="<c:url value="/resources/css/unslider-dots.css"/>"/>
 </head>
 <body>
 	<div id="header">

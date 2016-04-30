@@ -1,22 +1,50 @@
-<style type="text/css">
-   html, body { height: 100%; margin: 0; padding: 0; }
-   #map { height: 100%; }
- </style>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
 
-<div id="map"></div>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src='<c:url value="/resources/images/flats/flat1.jpg"/>' alt="Chania">
+    </div>
 
-<script type="text/javascript">
+    <div class="item">
+      <img src="img_chania2.jpg" alt="Chania">
+    </div>
 
-	var map;
-	function initMap() {
-	  map = new google.maps.Map(document.getElementById('map'), {
-	    center: {lat: -34.397, lng: 150.644},
-	    zoom: 8
-	  });
-	}
+    <div class="item">
+      <img src="img_flower.jpg" alt="Flower">
+    </div>
 
-</script>
-<script async defer
-  	src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    <div class="item">
+      <img src="img_flower2.jpg" alt="Flower">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<script>
+// Load this when the DOM is ready
+$(function(){
+  // You used .myCarousel here. 
+  // That's the class selector not the id selector,
+  // which is #myCarousel
+  $('#myCarousel').carousel();
+});
 </script>
