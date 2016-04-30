@@ -19,6 +19,21 @@
 	color: red;
 }
 
+.borderless td, .borderless th {
+    border: none !important;
+}
+
+.flat-details-td {
+	width: 300px;
+}
+
+.custom-table label {
+	font-weight: normal;
+}
+
+.flat-details-table {
+	width: 600px !important;
+}
 
 #bg{
       position: absolute;

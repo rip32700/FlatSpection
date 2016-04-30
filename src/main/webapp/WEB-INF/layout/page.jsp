@@ -20,7 +20,9 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r69/three.min.js"></script>
-    
+    <!-- img slider -->
+    <link rel="stylesheet" href="<c:url value="/resources/css/unslider.css"/>"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/unslider-dots.css"/>"/>
 </head>
 <body>
 	<div id="header">
