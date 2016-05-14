@@ -27,6 +27,18 @@ public class User {
 	public User() {
 
 	}
+	
+	
+
+	public User(String firstname, String lastname, String email, String password) {
+		super();
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.email = email;
+		this.password = password;
+	}
+
+
 
 	public User(Long userId, String firstname, String lastname, String email, String password, LocalDate birthday,
 			String phone, String mobile, Gender gender, EnumSet<UserStatus> statusSet, Address address,
