@@ -1,5 +1,7 @@
 package de.flatspection.dto;
 
+import java.time.LocalDate;
+
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -40,7 +42,7 @@ public class UserDTO {
 	//@DateTimeFormat(pattern = "dd.MM.yyyy HH:mm:ss.SSSZ")
 	@NotNull
 	@NotEmpty
-	private String birthday;
+	private LocalDate birthday;
 	
 	@NotNull
 	@NotEmpty
@@ -59,7 +61,7 @@ public class UserDTO {
 	}
 	
 	public UserDTO(String firstName, String lastName, String username, String email, String password,
-			String matchingPassword, String type, String birthday, String street, Integer streetNumber, String city,
+			String matchingPassword, String type, LocalDate birthday, String street, Integer streetNumber, String city,
 			Integer zip) {
 		super();
 		this.firstName = firstName;
@@ -76,11 +78,11 @@ public class UserDTO {
 		this.zip = zip;
 	}
 
-	public String getBirthday() {
+	public LocalDate getBirthday() {
 		return birthday;
 	}
 
-	public void setBirthday(String birthday) {
+	public void setBirthday(LocalDate birthday) {
 		this.birthday = birthday;
 	}
 

@@ -49,7 +49,7 @@ public class RegistrationController {
 	    else {
 	    	// auto login after successful registraiton
 	    	try {
-				request.login(registered.getUsername(),registered.getPassword());
+				request.login(registered.getEmail(),registered.getPassword());
 			} catch (ServletException e) {
 				e.printStackTrace();
 			}

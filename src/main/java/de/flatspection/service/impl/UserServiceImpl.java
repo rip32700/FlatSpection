@@ -14,6 +14,8 @@ public class UserServiceImpl implements UserService {
 	@Inject
 	private UserDao repository;
 	
+	
+	
 	@Override
 	public User registerNewUserAccount(UserDTO user) {
 
@@ -28,16 +30,9 @@ public class UserServiceImpl implements UserService {
         User newUser = new User();    
         newUser.setFirstname(user.getFirstName());
         newUser.setLastname(user.getLastName());
-        newUser.setUsername(user.getUsername());
         newUser.setPassword(user.getPassword());
         newUser.setEmail(user.getEmail());
-        newUser.setStreet(user.getStreet());
-        newUser.setStreetNumber(user.getStreetNumber());
-        newUser.setCity(user.getCity());
-        newUser.setZip(user.getZip());
-        newUser.setType(user.getType());
         newUser.setBirthday(user.getBirthday());
-        newUser.setRole(2); /*ROLE_USER*/
         
         return repository.save(newUser); 
 	}

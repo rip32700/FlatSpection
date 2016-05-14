@@ -52,7 +52,7 @@ public class UserDaoImpl implements UserDao {
 	public User findByUsername(String username) {
 		List<User> userList = findAllUsers();
 		for(User user : userList) {
-			if(user.getUsername().equals(username)) {
+			if(user.getEmail().equals(username)) {
 				return user;
 			}
 		}

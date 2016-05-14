@@ -36,7 +36,7 @@ public class MyUserDetailsService implements UserDetailsService {
         return  new org.springframework.security.core.userdetails.User
           (user.getEmail(), 
           user.getPassword().toLowerCase(), enabled, accountNonExpired, credentialsNonExpired, 
-            accountNonLocked, getAuthorities(user.getRole()));
+            accountNonLocked, getAuthorities(5));
 	}
 	
 	private Collection<? extends GrantedAuthority> getAuthorities(Integer role){

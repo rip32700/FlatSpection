@@ -1,41 +1,51 @@
 package de.flatspection.domain;
 
+import java.time.LocalDate;
+import java.util.EnumSet;
+import java.util.List;
+import java.util.Locale;
+
 public class User {
 
 	private Long userId;
-	private String username;
 	private String firstname;
 	private String lastname;
 	private String email;
 	private String password;
-	private String birthday;
-	private String street;
-	private int streetNumber;
-	private String city;
-	private int zip;
-	private String type;
-	private int role;
-	
+	private LocalDate birthday;
+	private String phone;
+	private String mobile;
+	private Gender gender;
+	private EnumSet<UserStatus> statusSet;
+	private Address address;
+	private Authority authority;
+	private List<Payment> paymentList;
+	private Locale language;
+	private List<MediaTemplate> mediaTemplateList;
+
+
 	public User() {
-		
+
 	}
 
-	public User(Long userId, String username, String firstname, String lastname, String email, String password,
-			String birthday, String street, int streetNumber, String city, int zip, String type, int role) {
+	public User(Long userId, String firstname, String lastname, String email, String password, LocalDate birthday,
+			String phone, String mobile, Gender gender, EnumSet<UserStatus> statusSet, Address address,
+			Authority authority, List<Payment> paymentList, Locale language, List<MediaTemplate> mediaTemplateList) {
 		super();
 		this.userId = userId;
-		this.username = username;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.email = email;
 		this.password = password;
 		this.birthday = birthday;
-		this.street = street;
-		this.streetNumber = streetNumber;
-		this.city = city;
-		this.zip = zip;
-		this.type = type;
-		this.role = role;
+		this.phone = phone;
+		this.mobile = mobile;
+		this.gender = gender;
+		this.statusSet = statusSet;
+		this.address = address;
+		this.paymentList = paymentList;
+		this.language = language;
+		this.mediaTemplateList = mediaTemplateList;
 	}
 
 	public Long getUserId() {
@@ -46,12 +56,28 @@ public class User {
 		this.userId = userId;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getPhone() {
+		return phone;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
+	public Gender getGender() {
+		return gender;
+	}
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
 	}
 
 	public String getFirstname() {
@@ -86,60 +112,62 @@ public class User {
 		this.password = password;
 	}
 
-	public String getBirthday() {
+	public LocalDate getBirthday() {
 		return birthday;
 	}
 
-	public void setBirthday(String birthday) {
+	public void setBirthday(LocalDate birthday) {
 		this.birthday = birthday;
 	}
 
-	public String getStreet() {
-		return street;
+	public EnumSet<UserStatus> getStatusSet() {
+		return statusSet;
 	}
 
-	public void setStreet(String street) {
-		this.street = street;
+	public void setStatusSet(EnumSet<UserStatus> statusSet) {
+		this.statusSet = statusSet;
 	}
 
-	public int getStreetNumber() {
-		return streetNumber;
+	public Address getAddress() {
+		return address;
 	}
 
-	public void setStreetNumber(int streetNumber) {
-		this.streetNumber = streetNumber;
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
-	public String getCity() {
-		return city;
+	public Authority getAuthority() {
+		return authority;
 	}
 
-	public void setCity(String city) {
-		this.city = city;
+	public void setAuthority(Authority authority) {
+		this.authority = authority;
 	}
 
-	public int getZip() {
-		return zip;
+	public List<Payment> getPaymentList() {
+		return paymentList;
 	}
 
-	public void setZip(int zip) {
-		this.zip = zip;
+	public void setPaymentList(List<Payment> paymentList) {
+		this.paymentList = paymentList;
 	}
 
-	public String getType() {
-		return type;
+	public Locale getLanguage() {
+		return language;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public void setLanguage(Locale language) {
+		this.language = language;
 	}
 
-	public int getRole() {
-		return role;
+	public List<MediaTemplate> getMediaTemplateList() {
+		return mediaTemplateList;
 	}
 
-	public void setRole(int role) {
-		this.role = role;
+	public void setMediaTemplateList(List<MediaTemplate> mediaTemplateList) {
+		this.mediaTemplateList = mediaTemplateList;
 	}
+
 	
+
 }
