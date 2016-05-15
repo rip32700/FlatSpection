@@ -22,12 +22,24 @@ public class UserServiceImpl implements UserService {
 		if (emailExists(user.getEmail())) {   
             throw new EmailExistsException("There is an account with that email address: "+ user.getEmail());
         }
-		
-		if (usernameExists(user.getUsername())) {   
-            throw new UsernameExistsException("There is an account with that username address: "+ user.getUsername());
+		//////
+		//no username existing any more
+		//////
+		/*
+		if (emailExists(user.getEmail())) {   
+            throw new UsernameExistsException("There is an account with that username address: "+ user.getEmail());
         }
+		*/
 		
-        User newUser = new User();    
+        User newUser = new User();
+        
+        //////
+        //test
+        
+        
+        
+        //test
+        //////
         newUser.setFirstname(user.getFirstName());
         newUser.setLastname(user.getLastName());
         newUser.setPassword(user.getPassword());
